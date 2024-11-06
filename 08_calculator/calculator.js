@@ -6,20 +6,12 @@ const subtract = function(first, second) {
 	return first - second;
 };
 
-const sum = function(total) {
-  let result = 0;
-  total.forEach((number) => {
-    result += number;
-  })
-  return result;
+const sum = function(array) {
+  return array.reduce((total, current) => total + current, 0);
 };
 
-const multiply = function(total) {
-  let result = 1;
-  total.forEach((number) => {
-    result *= number;
-  })
-  return result;
+const multiply = function(array) {
+  return array.reduce((product, current) => product * current);
 };
 
 const power = function(first, second) {
@@ -27,13 +19,13 @@ const power = function(first, second) {
 };
 
 const factorial = function(number) {
-  let result = 1;
+  let product = 1;
 
-  for (let i = result; i<=number; i++) {
-    result *= i;
+  for (let i = number; i > 0; i--) {
+    product *= i;
   }
 
-  return result;
+  return product;
 };
 
 // Do not edit below this line
