@@ -1,15 +1,17 @@
 const reverseString = function(string) {
-    let outputString;
+    // let outputString;
 
-    const stringArray = string.split("");
-    const outputArray = [];
+    // const stringArray = string.split("");
+    // const outputArray = [];
 
-    for (let i = stringArray.length - 1; i>=0; i--) {
-        outputArray.push(stringArray[i]);
-    }
+    // for (let i = stringArray.length - 1; i>=0; i--) {
+    //     outputArray.push(stringArray[i]);
+    // }
 
-    outputString = outputArray.join("");
-    return outputString;
+    // outputString = outputArray.join("");
+    // return outputString;
+
+    return string.split("").reverse().join("");
 };
 
 // Do not edit below this line
