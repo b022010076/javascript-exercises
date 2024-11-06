@@ -3,10 +3,18 @@ const leapYears = function(year) {
     // not divisible by 100, % 100 = 0
     // unless divisible by 400, % 400 = 0
 
-    if (year % 4 == 0) {
-        if (year % 100 == 0 && year % 400 == 0) return true;
-        else if (year % 100 == 0) return false;
-        else return true;
+    // if (year % 4 == 0) {
+    //     if (year % 100 == 0 && year % 400 == 0) return true;
+    //     else if (year % 100 == 0) return false;
+    //     else return true;
+    // } else return false;
+
+    const dividedByFour = year % 4 === 0;
+    const dividedByHundred = year % 100 === 0;
+    const dividedByFourHundred = year % 400 === 0;
+
+    if (dividedByFour && (!dividedByHundred || dividedByFourHundred)) {
+        return true;
     } else return false;
 };
 
